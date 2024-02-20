@@ -1,0 +1,1 @@
+Colored map saved as '/home/user/experiments/crosscompute-examples/test-abissa/runs/5XPGGwugunf8D41NFFokwfq8FGiLrFS1/output/colored_map.png'.
