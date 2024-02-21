@@ -8,16 +8,16 @@ input:
   variables:
     - id: serie_code
       view: string
-      path: variables.json
+      path: variables.dictionary
     - id: value_column
       view: string
-      path: variables.json
+      path: variables.dictionary
     - id: fig_title
       view: string
-      path: variables.json
+      path: variables.dictionary
     - id: legend_text
       view: string
-      path: variables.json
+      path: variables.dictionary
     - id: csv_file
       view: file
       path: data.csv
