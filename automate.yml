@@ -4,14 +4,23 @@ slug: see-colored-map
 description: Visualize country data
 version: 0.0.1
 
-# input:
-#   variables:
-#     - id: serie_code
-#       view: string
-#       path: variables.dictionary
-#     - id: value_column
-#       view: string
-#       path: variables.dictionary
+input:
+  variables:
+    - id: serie_code
+      view: string
+      path: variables.json
+    - id: value_column
+      view: string
+      path: variables.json
+    - id: fig_title
+      view: string
+      path: variables.json
+    - id: legend_text
+      view: string
+      path: variables.json
+    - id: csv_file
+      view: file
+      path: data.csv
 
 output:
   variables:
