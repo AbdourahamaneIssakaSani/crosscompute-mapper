@@ -18,9 +18,19 @@ input:
     - id: legend_text
       view: string
       path: variables.dictionary
+    - id: min_color
+      view: string
+      path: variables.dictionary
+    - id: max_color
+      view: string
+      path: variables.dictionary
     - id: csv_file
       view: file
       path: data.csv
+      configuration:
+        mime-types:
+          - text/csv
+
 
 output:
   variables:
@@ -43,6 +53,12 @@ batches:
   # folder contains an input subfolder;
   # input subfolder contains files for the input variables
   - folder: batches/standard
+    variables:
+      serie_code: SP.POP.TOTL
+      value_column: 2015 [YR2015]
+      fig_title: Countries Population, Total 2015
+      legend_text: From World Bank Open Data
+      csv_file: data.csv
 
 scripts:
   - path: test.ipynb
@@ -58,5 +74,7 @@ environment:
     - id: geopandas
       manager: pip
     - id: matplotlib
+      manager: pip
+    - id: numpy
       manager: pip
 

@@ -3,5 +3,7 @@
     "value_column": "2015 [YR2015]",
     "fig_title": "Countries Population, Total",
     "legend_text": "From World Bank Open Data",
-    "csv_file": "./wb_data.csv"
+    "csv_file": "./wb_data.csv",
+    "min_color": "wheat",
+    "max_color": "red"
 }

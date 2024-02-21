@@ -70,6 +70,8 @@ series_code = data['serie_code']
 value_column = data['value_column']
 fig_title = data.get('fig_title')
 legend_text = data.get('legend_text')
+min_color = data.get('min_color', '#ffffff')
+max_color = data.get('max_color', '#ff0000')
 
 
 # In[ ]:
@@ -117,6 +119,23 @@ merged_gdf = world_gdf.merge(
 # In[ ]:
 
 
+from matplotlib.colors import LinearSegmentedColormap
+import numpy as np
+
+num_colors = 1000
+
+min_value = merged_gdf['value'].min()
+max_value = merged_gdf['value'].max()
+
+normalized_values = (merged_gdf['value'] - min_value) / (max_value - min_value)
+
+colors = np.array([min_color, max_color])
+cmap = LinearSegmentedColormap.from_list('custom_gradient', colors)
+
+
+# In[ ]:
+
+
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 # Plot the map with color based on the 'value' column
@@ -126,10 +145,9 @@ cax = divider.append_axes("right", size="5%", pad=0.1)
 
 merged_gdf.to_crs(epsg=3857, inplace=True)
 
-merged_gdf.plot(column='value', cmap='OrRd', linewidth=0.8, ax=ax, edgecolor='0.8', legend=True, cax=cax, legend_kwds={'label': legend_text}, missing_kwds={'color': 'grey', "hatch": "///", 'label': 'Missing values'})
+merged_gdf.plot(column='value', cmap=cmap, linewidth=0.8, ax=ax, edgecolor='0.8', legend=True, cax=cax, legend_kwds={'label': legend_text}, missing_kwds={'color': 'grey', "hatch": "///", 'label': 'Missing values'})
 
-# Add a title
-plt.title(fig_title, fontsize=15, fontweight='bold', color='black', loc='center')
+plt.title(fig_title, fontsize=15, fontweight='bold', color='black', loc='center', pad=20, )
 
 # Save the plot as an image
 output_image_path = output_folder /'colored_map.png'
