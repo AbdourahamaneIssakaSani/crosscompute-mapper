@@ -1,7 +1,7 @@
 crosscompute: 0.9.4
-name: See Colored Map
-slug: see-colored-map
-description: Visualize country data
+name: Geographic Data Visualization
+slug: geo-data-visualization
+description: Generate Colorful Maps to Visualize Global Data
 version: 0.0.1
 
 input:
@@ -34,16 +34,23 @@ input:
 
 output:
   variables:
-    - id: colored_map
+    - id: geographic_visualization
       view: image
-      path: colored_map.png
+      path: geographic_visualization.png
       configuration:
         mime-types:
           - image/png
           - image/jpeg
 
+    - id: download
+      view: link
+      path: geographic_visualization.png
+
   templates:
     - path: output.md
+      expressions:
+
+# TODO: conditional output based on the value of a variable
 
 # batches are pre-defined runs with specific values set for each input variable
 batches:
@@ -53,19 +60,11 @@ batches:
   # folder contains an input subfolder;
   # input subfolder contains files for the input variables
   - folder: batches/standard
-    variables:
-      serie_code: SP.POP.TOTL
-      value_column: 2015 [YR2015]
-      fig_title: Countries Population, Total 2015
-      legend_text: From World Bank Open Data
-      csv_file: data.csv
 
 scripts:
   - path: test.ipynb
 
 environment:
-  interval: 25 hours
-
   packages:
     # id is the name of the package as defined in the package manager
     # manager is the name of a package manager such as apt, dnf, npm, pip
@@ -78,3 +77,13 @@ environment:
     - id: numpy
       manager: pip
 
+# buttons override the design of specific buttons
+buttons:
+  # id specifies the name of the button to override;
+  # configuration sets the design of the button
+  - id: continue
+    configuration:
+      button-text: Generate Map
+  - id: back
+    configuration:
+      button-text: Volver

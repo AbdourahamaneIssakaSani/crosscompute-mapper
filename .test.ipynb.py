@@ -147,10 +147,10 @@ merged_gdf.to_crs(epsg=3857, inplace=True)
 
 merged_gdf.plot(column='value', cmap=cmap, linewidth=0.8, ax=ax, edgecolor='0.8', legend=True, cax=cax, legend_kwds={'label': legend_text}, missing_kwds={'color': 'grey', "hatch": "///", 'label': 'Missing values'})
 
-plt.title(fig_title, fontsize=15, fontweight='bold', color='black', loc='center', pad=20, )
+plt.title(fig_title, fontsize=12, fontweight='bold', color='black', loc='right', pad=20, )
 
 # Save the plot as an image
-output_image_path = output_folder /'colored_map.png'
+output_image_path = output_folder /'geographic_visualization.png'
 plt.savefig(output_image_path, dpi=300, bbox_inches='tight')
 
 print(f"Colored map saved as '{output_image_path}'.")

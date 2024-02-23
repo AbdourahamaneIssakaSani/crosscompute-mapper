@@ -1,9 +1,9 @@
 {
-    "serie_code": "SP.POP.TOTL",
+    "serie_code": "EN.ATM.CO2E.PC",
     "value_column": "2015 [YR2015]",
-    "fig_title": "Countries Population, Total",
+    "fig_title": "CO2 emissions (metric tons per capita)",
     "legend_text": "From World Bank Open Data",
     "csv_file": "./wb_data.csv",
-    "min_color": "wheat",
+    "min_color": "green",
     "max_color": "red"
 }

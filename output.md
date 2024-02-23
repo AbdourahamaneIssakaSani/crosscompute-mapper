@@ -1,3 +1,11 @@
-# See Map
+# Geographic Visualization Result
 
-{ colored_map }
+This is the output of the geographic visualization.
+
+{ geographic_visualization }
+
+## Download
+
+Click the link below to download the generated map.
+
+{ download }
