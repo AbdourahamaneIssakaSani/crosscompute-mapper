@@ -2,7 +2,7 @@
 
 Transform your data into vibrant maps effortlessly with our user-friendly Data Visualization Tool.
 
-{ serie_code }
+{ series_code }
 
 { value_column }
 

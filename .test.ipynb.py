@@ -66,7 +66,7 @@ with var_path.open('rt') as f:
     data = json.load(f)
 
 csv_path = input_folder / 'data.csv'
-series_code = data['serie_code']
+series_code = data['series_code']
 value_column = data['value_column']
 fig_title = data.get('fig_title')
 legend_text = data.get('legend_text')

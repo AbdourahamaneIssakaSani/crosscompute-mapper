@@ -6,7 +6,7 @@ version: 0.0.1
 
 input:
   variables:
-    - id: serie_code
+    - id: series_code
       view: string
       path: variables.dictionary
     - id: value_column
