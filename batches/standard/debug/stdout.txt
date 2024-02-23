@@ -1,1 +1,0 @@
-Colored map saved as '/home/abissa/documents/crosscompute-mapper/batches/standard/output/geographic_visualization.png'.

@@ -155,3 +155,13 @@ plt.savefig(output_image_path, dpi=300, bbox_inches='tight')
 
 print(f"Colored map saved as '{output_image_path}'.")
 
+# import os
+# import time
+
+# Sleep for a specified duration (e.g., 30 minutes)
+# time.sleep(900)  # 900 seconds = 15 minutes
+
+# # Remove the image file after the specified duration
+# if os.path.exists(output_image_path):
+#     os.remove(output_image_path)
+

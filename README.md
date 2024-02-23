@@ -31,16 +31,16 @@ ASGI callable returned without completing response.
 
 ### Inputs
 
-Series Code: A unique code representing the type of data you want to visualize (e.g., population, GDP, surface area).
-Value Column: The specific column in your spreadsheet containing data values corresponding to the series code (e.g., "2000 [YR2000]").
-Figure Title: A title for your map, providing context for the visualized data.
-Legend Text: A description for the legend on your map, aiding viewers in understanding the color scale.
-Min and Max Colors: Choose the colors representing the minimum and maximum values on your map.
-CSV File: Your data source, following a format similar to the World Bank Data spreadsheet.
+- Series Code: A unique code representing the type of data you want to visualize (e.g., population, GDP, surface area).
+- Value Column: The specific column in your spreadsheet containing data values corresponding to the series code (e.g., "2000 [YR2000]").
+- Figure Title: A title for your map, providing context for the visualized data.
+- Legend Text: A description for the legend on your map, aiding viewers in understanding the color scale.
+- Min and Max Colors: Choose the colors representing the minimum and maximum values on your map.
+- CSV File: Your data source, following a format similar to the World Bank Data spreadsheet.
 
 Fill the fields or leave the predefined data
 
-![alt text](image.png)
+![alt text](./screenshots/input_image.png)
 
 Use [this](./wb_data.csv) dataset to test the tool.
 
@@ -63,6 +63,6 @@ Feel free to adapt the series code and value column based on your data structure
 Generate Map: Click the "continue" button to create a customized, color-coded map.
 Download: Once generated, a downloadable image link will be provided. Save the image for sharing or inclusion in your reports.
 
-![alt text](<Screenshot 2024-02-23 104129.png>)
+![alt text](./screenshots/Screenshot%202024-02-23%20104129.png)
 
 Feel free to experiment with different datasets and spreadsheet structures for your specific needs.
