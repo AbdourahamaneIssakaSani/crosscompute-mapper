@@ -2,6 +2,14 @@
 
 Transform your data into vibrant maps effortlessly with our user-friendly Data Visualization Tool.
 
+To get started, follow these simple steps:
+
+- Visit <https://databank.worldbank.org>.
+- Select a database of your choice.
+- Click on **Download options** and choose **CSV** format to download the dataset.
+
+Now you're ready to test the tool with your own dataset!
+
 { series_code }
 
 { value_column }

@@ -40,11 +40,6 @@ output:
     - id: geographic_visualization
       view: image
       path: geographic_visualization.png
-      configuration:
-        mime-types:
-          - image/png
-          - image/jpeg
-
     - id: download
       view: link
       path: geographic_visualization.png
