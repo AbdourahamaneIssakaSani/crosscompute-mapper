@@ -22,10 +22,11 @@ crosscompute
 
 A web page will be opened, and you'll see something in the terminal like:
 
-```
-ASGI callable returned without completing response.
+```plaintext
 20240223-003625 INFO serving at http://127.0.0.1:7000
 ```
+
+click on the provided link if your browser did not open automatically.
 
 ## Inputs and Outputs
 

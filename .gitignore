@@ -1,1 +1,6 @@
 runs/
+.ipynb_checkpoints/
+.test.ipynb.py
+*.test.ipynb.py
+**/debug/
+batches/standard/debug/
