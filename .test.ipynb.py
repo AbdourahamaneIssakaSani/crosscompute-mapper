@@ -143,9 +143,20 @@ fig, ax = plt.subplots(1, 1, figsize=(9, 9))
 divider = make_axes_locatable(ax)
 cax = divider.append_axes("right", size="5%", pad=0.1)
 
+# remove outline
+
+# remove ticks and numbers
+ax.set_yticklabels([])
+ax.set_xticklabels([])
+
+# remove all spines (the box around the plot)
+[s.set_visible(False) for s in ax.spines.values()]
+[t.set_visible(False) for t in ax.get_xticklines()]
+[t.set_visible(False) for t in ax.get_yticklines()]
+
 merged_gdf.to_crs(epsg=3857, inplace=True)
 
-merged_gdf.plot(column='value', cmap=cmap, linewidth=0.8, ax=ax, edgecolor='0.8', legend=True, cax=cax, legend_kwds={'label': legend_text}, missing_kwds={'color': 'grey', "hatch": "///", 'label': 'Missing values'})
+merged_gdf.plot(column='value', cmap=cmap, linewidth=0.7, ax=ax, edgecolor='0.7', legend=True, cax=cax, legend_kwds={'label': legend_text}, missing_kwds={'color': 'grey', "hatch": "///", 'label': 'Missing values'})
 
 plt.title(fig_title, fontsize=12, fontweight='bold', color='black', loc='right', pad=20, )
 
@@ -154,14 +165,4 @@ output_image_path = output_folder /'geographic_visualization.png'
 plt.savefig(output_image_path, dpi=300, bbox_inches='tight')
 
 print(f"Colored map saved as '{output_image_path}'.")
-
-# import os
-# import time
-
-# Sleep for a specified duration (e.g., 30 minutes)
-# time.sleep(900)  # 900 seconds = 15 minutes
-
-# # Remove the image file after the specified duration
-# if os.path.exists(output_image_path):
-#     os.remove(output_image_path)
 
